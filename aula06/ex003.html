@@ -21,19 +21,23 @@
 
 <body>
 
-    <script>    
+    <script>
         //Definindo Variáveis
         var num1
         var num2
-        var resultado    
+        var resultado
 
         //Realizando a coleta e soma dos números:
         num1 = window.prompt("Digite um número:")
         num2 = window.prompt("Digite outro número:")
-        resultado = Number(num1) + Number(num2)
-        
-        window.alert("Resultado: " + resultado)
 
+        //Conversão para number(seja float ou int)
+        resultado = Number(num1) + Number(num2)
+
+        //Template String
+        window.alert(`A soma entre o número ${num1} e o número ${num2} é: ${resultado}`)
+
+        //Conversão para String
         window.alert("Resultado em String: " + String(resultado))
 
     </script>
