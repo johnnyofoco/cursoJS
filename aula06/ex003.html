@@ -20,12 +20,22 @@
 </head>
 
 <body>
-    <h1>Olá Mundo!</h1>
-    <p>Já me livrei</p>
-    <script>
-        window.alert('Minha primeira mensagem!')
-        window.confirm('Esta gostando de JS?')
-        window.prompt('Qual é o seu nome?') 
+
+    <script>    
+        //Definindo Variáveis
+        var num1
+        var num2
+        var resultado    
+
+        //Realizando a coleta e soma dos números:
+        num1 = window.prompt("Digite um número:")
+        num2 = window.prompt("Digite outro número:")
+        resultado = Number(num1) + Number(num2)
+        
+        window.alert("Resultado: " + resultado)
+
+        window.alert("Resultado em String: " + String(resultado))
+
     </script>
 </body>
 
