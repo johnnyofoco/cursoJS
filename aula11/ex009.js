@@ -1,6 +1,6 @@
 var vel = 61
 console.log(`A velocidade do seu carro é ${vel} Km/h`)
-if (vel > 60){
+if (vel > 60) {
     console.log("")
     console.log(`Você ultrapassou a velocidade permitida. MULTADO!`)
 }
@@ -14,6 +14,6 @@ var pais = 'França'
 console.log(`Vivendo em ${pais}`)
 if (pais != 'Brasil') {
     console.log('Você é Estrangeiro!')
-}else{
+} else {
     console.log('Você é Brasileiro!')
 }

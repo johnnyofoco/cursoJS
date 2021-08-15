@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ESTRANGEIRO</title>
+</head>
+
+<body>
+    <form action="">
+        <h1>Sistema de Nacionalidade</h1>
+        Em que país você vive? <input type="text" name="txtpais" id="txtpais" required>
+        <input type="button" value="Definir" onclick="estrangeiro()">
+        <p id="msg"></p>
+        <p id="res"></p>
+    </form>
+
+    <!--JavaScript-->
+    <script>
+        function estrangeiro() {
+            var txtpais = window.document.getElementById('txtpais')
+            var pais = String(txtpais.value)
+
+            var msg = window.document.getElementById('msg')
+            msg.innerHTML = `<p>Vivendo em <strong>${pais}</strong></p>`
+
+            var res = window.document.getElementById('res')
+
+            if (pais === '') {
+                msg.innerHTML = '<p>Por favor informe um <strong>país!</strong></p>'
+                msg.style = 'color: red'
+            } else if (pais != 'Brasil') {
+                res.innerHTML = '<p>Você é Estrangeiro!</p>'
+
+            } else {
+                res.innerHTML = '<p>Você é Brasileiro!</p>'
+            }
+        }
+    </script>
+</body>
+
+</html>
