@@ -12,14 +12,26 @@
 
 <body>
     <header>
-        <h1>Título</h1>
+        <h1>Verificador de Idade</h1>
     </header>
     <section>
         <div>
-            Testando...
+            <p>Ano de nascimento:
+                <input type="number" name="txtabi" id="txtano" min="0">
+            </p>
+            <p>Sexo:
+                <input type="radio" name="radsex" id="mas" checked>
+                <label for="mas">Masculino</label>
+                <input type="radio" name="radsex" id="fem">
+                <label for="mas">Feminino</label>
+            </p>
+            <p>
+                <input type="button" value="Verificar" onclick="verificar()">
+            </p>
         </div>
-        <div>
-
+        <img src="" alt="">
+        <div id="res">
+            Preencha os dados acima para ver o resultado!
         </div>
     </section>
     <footer>
