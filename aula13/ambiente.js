@@ -19,8 +19,7 @@ do {
 
 
 //For
-
-for (let index = 1; index < 11; index++) {
-    console.log(`${index}`);
+for (let c = 1; c < 11; c++) {
+    console.log(`${c}`);
 
 }
