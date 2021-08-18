@@ -7,6 +7,20 @@ function contar() {
     var res = window.document.getElementById('res')
     res.innerHTML = ``
 
+    console.log(`inicio: ${inicio} fim: ${fim} passo: ${passo}`)
+
+    //to do list
+    // -- validação se as informações são inválidas
+    // -- fazer funcionar o contador de forma invertida.
+
+    while (Number(inicio) < 1 || Number(fim) < 1) {
+        res.innerHTML = 'Impossível contar!'
+    }
+    if (Number(passo) <= 0) {
+        window.alert('Passo inválido, considerando 1')
+        passo = 1
+    }
+
     //Processamento
     for (inicio; inicio <= fim; inicio += passo) {
 
@@ -23,7 +37,6 @@ function contar() {
         iconeBandeira.setAttribute('src', 'imagens/bandeira.png')
 
         //Saída
-
         res.appendChild(p)
 
         if (inicio < fim) {
