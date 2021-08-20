@@ -32,7 +32,7 @@ function contar() {
             iconeBandeira.setAttribute('src', 'imagens/bandeira.png')
 
             //Saída
-            res.appendChild(p)
+            res.appendChild(p) //adiciona dinamicamente um elemento parágrafo por à div: res
 
             if (inicio < fim) {
                 res.appendChild(iconeDedo)

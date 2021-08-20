@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(107, 107, 241);
+    background-color: rgb(70, 142, 236);
     font: normal 15pt Arial;
 }
 
@@ -15,11 +15,6 @@ section {
     width: 400px;
     margin: 0 auto;
     box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.363);
-}
-
-div {
-    text-align: center;
-    padding: 8px;
 }
 
 footer {
