@@ -1,17 +1,20 @@
 function tabuada() {
-    var num = Number(document.getElementById('txtn').value)
-    var tab = document.getElementById('seltab')
+    let num = Number(document.getElementById('txtn').value)
+    let tab = document.getElementById('seltab')
 
-    if ()
+    console.log(`${num} - ${typeof(num)}`)
 
-
+    if (num < 0 || num == '') {
+        window.alert('Informe um número valído!')
+    } else {
+        tab.innerHTML = ''
         for (let c = 0; c <= 10; c++) {
-        var opt = document.createElement('option')
-        opt.setAttribute('value', `${c}`)
-        opt.innerHTML = `${c} * ${num} = ${(c*num)}`
-        tab.appendChild(opt)
+            let opt = document.createElement('option')
+            opt.setAttribute('value', `${c}`)
+            opt.innerHTML = `${c} * ${num} = ${c * num}`
+            tab.appendChild(opt)
+        }
     }
-
 
 
 
