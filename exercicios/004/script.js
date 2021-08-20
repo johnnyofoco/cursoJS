@@ -5,19 +5,15 @@ function contar() {
     var fim = Number(window.document.getElementById('fim').value)
     var passo = Number(window.document.getElementById('passo').value)
     var res = window.document.getElementById('res')
-    res.innerHTML = ``
 
-    //console.log(`inicio: ${inicio} fim: ${fim} passo: ${passo}`)
-
-    //to do list
-    // -- validação se as informações são inválidas
-    // -- fazer funcionar o contador de forma invertida.
+    res.innerHTML = 'Contando: <br>'
 
     if (inicio == 0 || fim == 0) {
         res.innerHTML = 'Impossível contar!'
     } else if (passo <= 0) {
         window.alert('Passo inválido, considerando 1')
         passo = 1
+
     } else if (inicio < fim) {
 
         //Processamento
@@ -42,7 +38,6 @@ function contar() {
                 res.appendChild(iconeDedo)
             }
         }
-        res.appendChild(iconeBandeira)
 
     } else {
         //Tratamento para funcionar com contagem regressiva
@@ -67,8 +62,8 @@ function contar() {
                 res.appendChild(iconeDedo)
             }
         }
-        res.appendChild(iconeBandeira)
-    }
 
+    }
+    res.appendChild(iconeBandeira)
 
 }
