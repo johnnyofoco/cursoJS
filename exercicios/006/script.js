@@ -10,19 +10,16 @@ function adicionarNumero() {
         window.alert('Favor inserir um número positivo válido!')
     } else if (numDigitado > 100) {
         window.alert('O número informado deve estar entre 1 e 100')
-    } else if (finalizado == true) {
-        //Se ao clicar em adicionar o usuário já tenha feito a análise então o programa irá
-        //limpar as informações de resultado da análise da tela
-        divResult.innerHTML = ''
-        finalizado = false
-
     } else if (arrayNumeros.indexOf(numDigitado) == -1) {
         let optionNum = document.createElement('option')
         optionNum.setAttribute('id', `opt_${numDigitado}`)
         optionNum.setAttribute('value', `${numDigitado}`)
         optionNum.innerHTML = `Valor ${numDigitado} adicionado.`
         numAdicionados.appendChild(optionNum) //adiciona cada novo número a tabela de números
+        divResult.innerHTML = ''
         arrayNumeros.push(numDigitado)
+        finalizado = false
+
     } else {
         window.alert('O número informado já foi adicionado a lista!')
     }
