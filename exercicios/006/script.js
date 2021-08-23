@@ -7,7 +7,7 @@ function adicionarNumero() {
     let numAdicionados = document.getElementById('tabelaNumAdicionados')
 
     if (numDigitado == '' || numDigitado <= 0) {
-        window.alert('Favor inserir um número válido!')
+        window.alert('Favor inserir um número positivo válido!')
     } else if (numDigitado > 100) {
         window.alert('O número informado deve estar entre 1 e 100')
     } else if (finalizado == true) {
@@ -16,18 +16,15 @@ function adicionarNumero() {
         divResult.innerHTML = ''
         finalizado = false
 
-    } else {
+    } else if (arrayNumeros.indexOf(numDigitado) == -1) {
         let optionNum = document.createElement('option')
         optionNum.setAttribute('id', `opt_${numDigitado}`)
         optionNum.setAttribute('value', `${numDigitado}`)
         optionNum.innerHTML = `Valor ${numDigitado} adicionado.`
         numAdicionados.appendChild(optionNum) //adiciona cada novo número a tabela de números
-
-        arrayNumeros.push(numDigitado) //adiciona cada novo número ao array
-        console.log(arrayNumeros)
-
-        //limpa o campo número para facilitar a inserção do próximo
-        // a fazer...
+        arrayNumeros.push(numDigitado)
+    } else {
+        window.alert('O número informado já foi adicionado a lista!')
     }
 
 }
@@ -73,7 +70,7 @@ function analisarNumeros() {
             let numeroContidoArray = array[pos];
             soma += numeroContidoArray
         }
-        return `A média dos valores digitados é ${soma / array.length}.`
+        return `A média dos valores digitados é ${Number(soma / array.length)}.`
     }
 
     //Função para criar um parágrafo e apresentar cada uma das análise feitas com os números
@@ -84,7 +81,7 @@ function analisarNumeros() {
         divResult.appendChild(pResultado)
     }
 
-    if (finalizado == false) {
+    if (finalizado == false && arrayNumeros.length > 0) {
         criarParagrafos('func_qtdElementosArray', qtdElementosArray(arrayNumeros))
         criarParagrafos('func_maiorValorArray', maiorValorArray(arrayNumeros))
         criarParagrafos('func_menorValorArray,', menorValorArray(arrayNumeros))
@@ -92,5 +89,7 @@ function analisarNumeros() {
         criarParagrafos('func_mediaValoresArray', mediaValoresArray(arrayNumeros))
 
         finalizado = true
+    } else {
+        window.alert('Adicione valores antes de finalizar!')
     }
 }
