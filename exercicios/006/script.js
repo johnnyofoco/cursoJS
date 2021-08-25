@@ -15,6 +15,7 @@ function adicionarNumero() {
         optionNum.setAttribute('id', `opt_${numDigitado}`)
         optionNum.setAttribute('value', `${numDigitado}`)
         optionNum.innerHTML = `Valor ${numDigitado} adicionado.`
+
         numAdicionados.appendChild(optionNum) //adiciona cada novo número a tabela de números
         divResult.innerHTML = ''
         arrayNumeros.push(numDigitado)
@@ -43,7 +44,7 @@ function analisarNumeros() {
 
     //Função Descobrir qual o menor valor dentro do array
     function menorValorArray(array) {
-        array.sort()
+        array.sort().Number
         let menorNumero = array[0]
         return ` O menor valor informado foi ${menorNumero}.`
     }
