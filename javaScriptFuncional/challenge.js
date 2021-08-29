@@ -15,13 +15,45 @@
 //Se numInicio > numFim então passo = -1
 
 function range(...nums) {
-    let result = 0
+    let result = []
+    let paramUm
+    let paramDois
+    let paramTres
 
     for (let n of nums) {
-        total += n
+        result.push(n)
     }
 
+    if (result.length < 1) {
+        result = ''
+        console.log('[ERRO]: Favor digitar ao menos um parâmetro!')
+    } else if (result.length == 1) {
+        paramUm = result
+            //console.log(`paraUm: ${paramUm}`)
+        if (paramUm > 1) {
+            result = paramUm
+
+            let cont = Number(result)
+            let n = 1
+
+            while (n < cont) {
+                result.push(n)
+                n++
+                result.sort((a, b) => a - b)
+            }
+        }
+
+    } else if (result.length == 2) {
+
+
+    } else if (result.lengthlt == 3) {
+
+    } else if (result.length > 3) {
+        console.log(`[ERRO]: mais que 3 parâmetros. Recebeu: ${result.length} parâmetros a função não será executada!`)
+        result = ''
+    }
     return result
+
 }
 
-range()
+console.log(range(1000))
