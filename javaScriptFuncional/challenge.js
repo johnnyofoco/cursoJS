@@ -1,11 +1,5 @@
 //Create a range function
 
-//range(5) - > [1, 2, 3, 4, 5] --OK
-//range(6, 11) - > [6, 7, 8, 9, 10, 11] --OK
-//range(10, 19, 2) - > [10, 12, 14, 16, 18] --OK
-//range(6, 2) - > [6, 5, 4, 3, 2] --OK
-//range(8, -3, 4) - > [8, 4, 0] --OK
-
 function range(...nums) {
     let result = []
     let paramUm
@@ -94,4 +88,22 @@ function range(...nums) {
 
 }
 
+
+console.log('range(5) -> [1, 2, 3, 4, 5] Resultado: ')
+console.log(range(5))
+console.log('----------------------------------------')
+
+console.log('range(6, 11) -> [6, 7, 8, 9, 10, 11] Resultado: ')
+console.log(range(6, 11))
+console.log('----------------------------------------')
+
+console.log('range(10, 19, 2) -> [10, 12, 14, 16, 18] Resultado: ')
+console.log(range(10, 19, 2))
+console.log('----------------------------------------')
+
+console.log('range(6, 2) -> [6, 5, 4, 3, 2] Resultado: ')
+console.log(range(6, 2))
+console.log('----------------------------------------')
+
+console.log('range(8, -3, 4) -> [8, 4, 0] Resultado: ')
 console.log(range(8, -3, 4))
