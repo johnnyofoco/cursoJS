@@ -1,0 +1,94 @@
+/*#### GLOBAL ####*/
+
+
+/*
+CORES:
+#F8B195
+#F67280
+#C06C84
+#6C5B7B
+#355C7D
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: #ffffff;
+}
+
+html,
+body {
+    height: 100vh;
+    background: #f8b195;
+    background: linear-gradient(180deg, #f8b195 0%, #c06c84 20%, #355c7d 100%);
+}
+
+
+/*#### HEADER / MENU ####*/
+
+.menu-principal {
+    min-height: 100px;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+.menu-principal ul {
+    align-self: center;
+}
+
+.menu-principal ul li {
+    padding: 10px;
+    display: inline-block;
+    background-color: #355C7D;
+    color: #ffffff;
+    border-radius: 15px;
+}
+
+.menu-principal ul li:hover {
+    cursor: pointer;
+    background-color: #C06C84;
+    color: #F8B195;
+}
+
+
+/*#### SECTION ####*/
+
+h1 {
+    color: #ffffff;
+    margin-top: 2%;
+    text-align: center;
+    font-size: 36px;
+}
+
+#sec-inicial {
+    height: 80vh;
+}
+
+#sec-inicial #cadastroFuncionario {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 90%;
+    height: 70vh;
+    background-color: black;
+}
+
+
+/*#### FOOTER ####*/
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+
+/*#### RESPONSIVIDADE ####*/
+
+@media screen and (max-width: 590px) {
+    .menu-principal ul li {
+        display: block;
+        margin-top: 2%;
+        text-align: center;
+    }
+}
