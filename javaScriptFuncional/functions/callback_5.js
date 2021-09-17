@@ -26,3 +26,7 @@ Array.prototype.meuReduce = function (fn, inicial) {
     }
     return acc
 }
+
+const totalGeral2 = carrinho.map(getTotal).meuReduce(somar)
+
+console.log(totalGeral2)
